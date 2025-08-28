@@ -11,7 +11,7 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
-
+import ExampleBox, { ExampleBox2 } from './ExampleBox.tsx';
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -28,6 +28,8 @@ function AppContent() {
 
   return (
     <View style={styles.container}>
+      <ExampleBox />
+      <ExampleBox2 />
       <NewAppScreen
         templateFileName="App.tsx"
         safeAreaInsets={safeAreaInsets}
@@ -39,6 +41,7 @@ function AppContent() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 50,
   },
 });
 
